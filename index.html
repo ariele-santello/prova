@@ -179,7 +179,6 @@
 
 
 	<body>
-		<div class="parent">
 		<div id="grid-container">
 			<div id="top">
 				<ul id="selectorNav">
@@ -197,7 +196,45 @@
 						    <a class="buttonArticle" onclick="changeArticle(); hideNext()">Article 3</a>
 						</div>
 					</li>
+					<!-- <a class="buttonArticle" onclick="changeArticle()">Article 3</a>
+							<a class="buttonArticle" onclick="changeArticle()">Article 4</a> -->
 					
+					<!-- navbar con doppio dropdown: (problema: quando si va in hover sull'elemento <li>Issues</li>, si sovrebbero vedere solo tre elementi: issue 1, issue 2, issue 3. Solo una volte andati in hover su uno di questi tre elementi, solo allora si dovrebbero vedere gli articoli. Bisogna dare una classe specifica all'elemento <li>Issue 1</li> (come per gli altri due issue) che lo renda sia dropdown-content che dropdown container)
+				  	<li class="dropdown"><a class="dropbtn">Issues</a>
+				  		<div class="dropdown-content">
+				      		<li class="dropdown"><a class="dropbtn buttonIssue" onclick="changeIssue('issue1')">Issue 1</a>
+				      			<div class="dropdown-content changeArguments">
+				      				<a class="buttonIssue" onclick="changeIssue('issue1')">Cover page</a>
+				      				<a class="buttonArticle" onclick="changeArticle()">Article 1</a>
+				      				<a class="buttonArticle" onclick="changeArticle()">Article 2</a>
+				      				<a class="buttonArticle" onclick="changeArticle()">Article 3</a>
+				      				<a class="buttonArticle" onclick="changeArticle()">Article 4</a>
+				      				<a class="buttonArticle" onclick="changeArticle()">Article 5</a>
+				      			</div>
+				      		</li>
+				      		<li class="dropdown"><a class="dropbtn buttonIssue" onclick="changeIssue('issue2')">Issue 2</a>
+				      			<div class="dropdown-content changeArguments">
+				      				<a class="buttonIssue" onclick="changeIssue('issue2')">Cover page</a>
+				      				<a class="buttonArticle" onclick="changeArticle()">Article 1</a>
+				      				<a class="buttonArticle" onclick="changeArticle()">Article 2</a>
+				      				<a class="buttonArticle" onclick="changeArticle()">Article 3</a>
+				      				<a class="buttonArticle" onclick="changeArticle()">Article 4</a>
+				      				<a class="buttonArticle" onclick="changeArticle()">Article 5</a>
+				      			</div>
+				      		</li>
+				      		<li class="dropdown"><a class="dropbtn">Issue 3</a>
+				      			<div class="dropdown-content changeArguments">
+				      				<a class="buttonIssue">Cover page</a>
+				      				<a class="buttonArticle" onclick="changeArticle()">Article 1</a>
+				      				<a class="buttonArticle" onclick="changeArticle()">Article 2</a>
+				      				<a class="buttonArticle" onclick="changeArticle()">Article 3</a>
+				      				<a class="buttonArticle" onclick="changeArticle()">Article 4</a>
+				      				<a class="buttonArticle" onclick="changeArticle()">Article 5</a>
+				      			</div>
+				      		</li>
+				    	</div>
+				  	</li> -->
+					<!-- <li><a href="#news">Disclaimer</a></li> -->
 				  	<li class="dropdown"><a class="dropbtn">Themes</a>
 						<div class="dropdown-content">
 							<a href="#" onclick="changeCSS('PROVA_CSS.css', 0);">Stile di prova 1</a>
@@ -216,10 +253,45 @@
 				<script src="PROVA_js.js"></script>	
 
 
+				<!--  bottoni per cambiare stile
+					
+				<a class="buttonStyle" href="#" onclick="changeCSS('PROVA_CSS.css', 0);">Style 1</a>
+				<a class="buttonStyle" href="#" onclick="changeCSS('PROVA2_CSS.css', 0);">Style 2</a>
+				<script src="PROVA_js.js"></script>
 
-			</div> <!-- si chiude il div top in cui c'è il selector e la navbar generica -->
-			</div>
-			<div class="child">
+				bottoni per cambiare issue
+
+				<a class="buttonIssue" onclick="changeIssue('issue1')">Issue 1</a>
+				<a class="buttonIssue" onclick="changeIssue('issue2')">Issue 2</a>
+				<script src="PROVA_js.js"></script>
+
+				bottoni per cambiare articolo
+
+				<div id="changeArguments">
+
+					<a class="buttonArticle" onclick="changeArticle()">Article 1</a>
+					<a class="buttonArticle" onclick="changeArticle()">Article 2</a>
+					<a class="buttonArticle" onclick="changeArticle()">Article 3</a>
+					<script src="PROVA_js.js"></script>
+					<br>
+					<br>
+
+				</div>
+				
+			 	bottoni per andare all'articolo di origine del testo 
+
+				<a class="buttonIssue" id="Origin">Origin</a>
+				<a class="buttonIssue" onclick="prevArticlee()">Previous article</a>
+				<script src="PROVA_js.js"></script>-->
+				
+				
+				
+				<!-- testo prova
+
+				<p>woeihfòiwueHGFòIUwgeògiWòEIGUHwòoeughwueg</p> -->
+
+			</div> <!-- si chiude il div top in cui c'è il selector e la navbar generica -->			
+
 			<div id="content">
 				<!-- bottone per articolo precedente -->
 				<button id="prev" onclick="prevArticle()"/>previous</button>
@@ -241,7 +313,20 @@
 					<div class="article1 article">
 						<iframe src="art1-bbc1.html" name="iframe1" id="iframe1" frameborder="0" border="0" cellspacing="0" style="border-style: none; width: 100%; height: 93%"></iframe>
 			    	</div>
-			</div>
+
+					<!-- article 2 -->
+
+					<div class="article2 article">
+						<iframe src="art2-bbc2.html" name="iframe2" id="iframe2" frameborder="0" border="0" cellspacing="0" style="border-style: none; width: 100%; height: 83%;"></iframe>
+			    	</div>
+
+					<!-- article 3 -->
+
+					<div class="article3 article">
+						<iframe src="art3-Atl.html" name="iframe3" id="iframe3" frameborder="0" border="0" cellspacing="0" style="border-style: none; width: 100%; height: 83%;"></iframe>
+			    	</div>
+			    	
+			    </div>
 
 				<!-- issue 2 -->
 
@@ -257,7 +342,14 @@
 
 					<div class="article1 article">
 						<iframe src="art1-artsy.html" name="iframe4" id="iframe4" frameborder="0" border="0" cellspacing="0" style="border-style: none;width: 100%; height: 83%;"></iframe>
-			    
+			    	</div>
+
+					<!-- article 2 -->
+
+					<div class="article2 article">
+						<iframe src="art2-cnn.html" name="iframe5" id="iframe5" frameborder="0" border="0" cellspacing="0" style="border-style: none;width: 100%; height: 103%;"></iframe>
+			    	</div>
+
 			        <!-- article 3 -->
 
 			        <div class="article3 article">
@@ -337,3 +429,4 @@
 
 	</body>
 </html>
+
