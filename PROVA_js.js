@@ -606,10 +606,18 @@ var sortOccurrences = function(){
 			var x = a.toLowerCase(), y = b.toLowerCase();
 			return x < y ? -1 : x > y ? -1 : 0;
 		});
-	};
-	window.onload = function(){
-    	document.getElementById("sort").onclick = sortOccurrences;
+		var parent = document.getElementById("listIssue" + i);
+		parent.innerHTML = "";
+
+    	for (var i = 0, l = occurrence.length; i < l; i++) {
+        parent.appendChild(occurrence[i]);
     }
+	}
+};
+window.onload = function(){
+    document.getElementById("sort").onclick = sortOccurrences;
+}
+
 
 
 
