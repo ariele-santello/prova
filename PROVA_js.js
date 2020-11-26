@@ -588,7 +588,6 @@ function highlight(spanId, iFrameN, event) {
      event.stopPropagation();
 }
 
-/*
 function sortOccurrences(){
 	var elements = document.getElementById("metadata").children;
 	var counter = 0;
@@ -601,15 +600,15 @@ function sortOccurrences(){
 	for (var i = 1; i < counter; i++){
 		var list = document.getElementById("listIssue" + i);
 		var ids = document.getElementById("listIssue" + i).getElementsByTagName("li");
-		var occurrence = document.getElementById("listIssue" + i).getElementsByTagName("li").children;
-		occurrence = Array.prototype.slice.call(occurrence, 0);
+		var occurrence = document.getElementById("listIssue" + i).getElementsByTagName("li").children.innerHTML;
+		/*occurrence = Array.prototype.slice.call(occurrence, 0);*/
 		occurrence.sort(function (a, b) {
 			var x = a.toLowerCase(), y = b.toLowerCase();
 			return x < y ? 1 : x > y ? -1 : 0;
 		})
 	}
 }
-*/
+
 
 
 
