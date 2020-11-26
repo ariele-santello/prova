@@ -588,7 +588,7 @@ function highlight(spanId, iFrameN, event) {
      event.stopPropagation();
 }
 
-var sortOccurrences = function(){
+function sortOccurrences(){
 	var elements = document.getElementById("metadata").children;
 	var counter = 0;
 	for (var i = 0; i < elements.length; i++){
@@ -606,16 +606,7 @@ var sortOccurrences = function(){
 			var x = a.toLowerCase(), y = b.toLowerCase();
 			return x < y ? -1 : x > y ? -1 : 0;
 		});
-		var parent = document.getElementById("listIssue" + i);
-		parent.innerHTML = "";
-
-    	for (var i = 0, l = occurrence.length; i < l; i++) {
-        parent.appendChild(occurrence[i]);
-    }
 	}
-};
-window.onload = function(){
-    document.getElementById("sort").onclick = sortOccurrences;
 }
 
 
