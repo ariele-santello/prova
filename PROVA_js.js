@@ -604,7 +604,7 @@ function sortOccurrences(){
 		/*occurrence = Array.prototype.slice.call(occurrence, 0);*/
 		occurrence.sort(function (a, b) {
 			var x = a.toLowerCase(), y = b.toLowerCase();
-			return x < y ? 1 : x > y ? -1 : 0;
+			return x < y ? -1 : x > y ? -1 : 0;
 		})
 	}
 }
