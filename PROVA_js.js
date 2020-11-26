@@ -598,7 +598,7 @@ function sortOccurrences(){
 		}
 	}
 
-	for (var i = 1, i < counter; i++){
+	for (var i = 1; i < counter; i++){
 		var list = document.getElementById("listIssue" + i);
 		var ids = document.getElementById("listIssue" + i).getElementsByTagName("li");
 		var occurrence = document.getElementById("listIssue" + i).getElementsByTagName("li").children;
