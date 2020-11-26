@@ -588,7 +588,7 @@ function highlight(spanId, iFrameN, event) {
      event.stopPropagation();
 }
 
-function sortOccurrences(){
+var sortOccurrences = function(){
 	var elements = document.getElementById("metadata").children;
 	var counter = 0;
 	for (var i = 0; i < elements.length; i++){
@@ -605,9 +605,12 @@ function sortOccurrences(){
 		occurrence.sort(function (a, b) {
 			var x = a.toLowerCase(), y = b.toLowerCase();
 			return x < y ? -1 : x > y ? -1 : 0;
-		})
-	}
-}
+		});
+	};
+	window.onload = function(){
+    	document.getElementById("sort").onclick = sortOccurrences;
+    }
+
 
 
 
