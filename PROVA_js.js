@@ -597,6 +597,7 @@ function sortOccurrences(){
 			counter ++;
 		}
 	}
+
 	for (var i = 1, i < counter; i++){
 		var list = document.getElementById("listIssue" + i);
 		var ids = document.getElementById("listIssue" + i).getElementsByTagName("li");
@@ -605,7 +606,7 @@ function sortOccurrences(){
 		occurrence.sort(function (a, b) {
 			var x = a.toLowerCase(), y = b.toLowerCase();
 			return x < y ? 1 : x > y ? -1 : 0;
-		});
+		})
 	}
 }
 /*
