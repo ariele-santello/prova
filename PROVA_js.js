@@ -588,7 +588,7 @@ function highlight(spanId, iFrameN, event) {
      event.stopPropagation();
 }
 
-
+/*
 function sortOccurrences(){
 	var elements = document.getElementById("metadata").children;
 	var counter = 0;
@@ -609,6 +609,11 @@ function sortOccurrences(){
 		})
 	}
 }
+*/
+
+
+
+
 /*
 function removeHighligth(iFrameN){
 	var isOnView = document.getElementById(iFrameN).contentWindow.document.getElementsByName("onView");
