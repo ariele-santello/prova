@@ -600,13 +600,11 @@ for (var i = 1; i < counter; i++){
 	*/
 
 	for (var i = 1; i <= 2; i++){   //nella versine finale ci sarà 3 perchè abbiamo 3 listissues
-		sortList("listIssue" + i)
-		//var list = document.getElementById("listIssue" + i);
-		//var categories = list.children;	
-		/* Array.prototype.slice.call(categories).sort(function (a, b) {
-			a < b ? -1 : a > b ? 1 : 0;
-		});  //var instances = ids.children.innerHTML;  */
-		//var arrCategories = Array.prototype.slice.call(categories).slice(1, arrCategories.length);
+		sortList("listIssue" + i);
+		
+		for (var n = 0; n <= document.getElementById("listIssue" + i).children; n++){
+			sortList(document.getElementById("listIssue" + i).children[n].innerText); //siccome è una classe non va bene
+		}
 	}
 }
 
