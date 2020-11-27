@@ -600,17 +600,38 @@ for (var i = 1; i < counter; i++){
 	*/
 
 	for (var i = 1; i <= 2; i++){   //nella versine finale ci sarà 3 perchè abbiamo 3 listissues
-		var list = document.getElementById("listIssue" + i);
-		var categories = list.children;
-		
-		Array.prototype.slice.call(categories).sort(function (a, b) {
+		sortList("listIssue" + i)
+		//var list = document.getElementById("listIssue" + i);
+		//var categories = list.children;	
+		/* Array.prototype.slice.call(categories).sort(function (a, b) {
 			a < b ? -1 : a > b ? 1 : 0;
-		});  //var instances = ids.children.innerHTML;
+		});  //var instances = ids.children.innerHTML;  */
 		//var arrCategories = Array.prototype.slice.call(categories).slice(1, arrCategories.length);
 	}
 }
 
-
+function sortList(listIssue) {
+  var list, i, switching, b, shouldSwitch;
+  list = document.getElementById(listIssue); //listIssue1/2 oppure person
+  switching = true;
+  
+  while (switching) {
+  	switching = false;
+  	b = list.children;
+  	for (i = 0; i < (b.length - 1); i++) {
+      shouldSwitch = false;
+     
+      if (b[i].getAttribute("class").toLowerCase() > b[i + 1].getAttribute("class").toLowerCase()) {
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      b[i].parentNode.insertBefore(b[i + 1], b[i]);
+      switching = true;
+    }
+  }
+}
 
 
 
