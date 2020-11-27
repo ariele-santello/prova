@@ -604,7 +604,7 @@ for (var i = 1; i < counter; i++){
 		var categories = list.children;
 		
 		Array.prototype.slice.call(categories).sort(function (a, b) {
-			return a < b ? -1 : a > b ? 1 : 0;
+			a < b ? -1 : a > b ? 1 : 0;
 		});  //var instances = ids.children.innerHTML;
 		//var arrCategories = Array.prototype.slice.call(categories).slice(1, arrCategories.length);
 	}
