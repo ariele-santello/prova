@@ -594,9 +594,11 @@ function sortOccurrences(){
 	for (var i = 1; i < elements.length; i++){if (elements[i].id.includes("listIssue")){counter ++;}} 
 	for (var i = 1; i < counter; i++){ */
 	for (var i = 1; i <= 2; i++){   //nella versine finale ci sarà 3 perchè abbiamo 3 listissues
-		sortCategory("listIssue" + i);
+		//sortCategory("listIssue" + i);
+		sortCategory(document.getElementById("listIssue" + i));
 		for (var n = 0; n <= document.getElementById("listIssue" + i).children.length; n++){
-			sortInstancies("listIssue" + i, document.getElementById("listIssue" + i).children[n].className);
+			//sortInstancies("listIssue" + i, document.getElementById("listIssue" + i).children[n].className);
+			sortInstancies(document.getElementById("listIssue" + i).getElementsByClassName(curCategory)[0]);
 		}
 	}
 }
@@ -605,9 +607,10 @@ function sortByAppearance(){
 	
 }
 
-function sortCategory(listIssue) {
-  var list, i, switching, b, shouldSwitch;
-  list = document.getElementById(listIssue); //listIssue1/2 oppure person
+function sortCategory(list) {
+  //var list, i, switching, b, shouldSwitch;
+  //list = document.getElementById(listIssue); //listIssue1/2 oppure person
+  var i, switching, b, shouldSwitch;
   switching = true;
   while (switching) {
   	switching = false;
@@ -625,7 +628,7 @@ function sortCategory(listIssue) {
 	}
   }
 }
-
+/*
 function sortInstancies(listIssue, curCategory){
 	var list, i, switching, b, shouldSwitch;
 	var list = document.getElementById(listIssue).getElementsByClassName(curCategory)[0];	
@@ -645,7 +648,7 @@ function sortInstancies(listIssue, curCategory){
 		}
 	}
 }
-
+*/
 
 
 /*
