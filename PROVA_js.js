@@ -598,7 +598,7 @@ function sortOccurrences(){
 		sortCategory("listIssue" + i);
 		
 		for (var n = 0; n <= document.getElementById("listIssue" + i).children.length; n++){
-			sortInstancies("listIssue" + i, document.getElementById("listIssue" + i).children[n].ClassName);
+			sortInstancies("listIssue" + i, document.getElementById("listIssue" + i).children[n].className);
 		}
 	}
 }
