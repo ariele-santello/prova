@@ -591,47 +591,52 @@ function highlight(spanId, iFrameN, event) {
 function sortOccurrences(){
 	var elements = document.getElementById("metadata").children;
 	/*var counter = 0;
-	for (var i = 1; i < elements.length; i++){
-		if (elements[i].id.includes("listIssue")){
-			counter ++;
-		}
-	} 
-for (var i = 1; i < counter; i++){ 
+	for (var i = 1; i < elements.length; i++){if (elements[i].id.includes("listIssue")){counter ++;}} 
+	for (var i = 1; i < counter; i++){ 
 	*/
-
 	for (var i = 1; i <= 2; i++){   //nella versine finale ci sarà 3 perchè abbiamo 3 listissues
-		sortList("listIssue" + i);
+		sortCategory("listIssue" + i);
 		
 		for (var n = 0; n <= document.getElementById("listIssue" + i).children; n++){
-			sortList(document.getElementById("listIssue" + i).children[n].innerText); //siccome è una classe non va bene
+			sortInstancies("listIssue" + i, document.getElementById("listIssue" + i).children[n].ClassName);
 		}
 	}
 }
 
-function sortList(listIssue) {
+function sortByAppearance(){	}
+
+function sortCategory(listIssue) {
   var list, i, switching, b, shouldSwitch;
   list = document.getElementById(listIssue); //listIssue1/2 oppure person
   switching = true;
-  
   while (switching) {
   	switching = false;
   	b = list.children;
   	for (i = 0; i < (b.length - 1); i++) {
-      shouldSwitch = false;
-     
-      if (b[i].getAttribute("class").toLowerCase() > b[i + 1].getAttribute("class").toLowerCase()) {
-        shouldSwitch = true;
-        break;
-      }
-    }
-    if (shouldSwitch) {
-      b[i].parentNode.insertBefore(b[i + 1], b[i]);
-      switching = true;
-    }
+      		shouldSwitch = false;
+      		if (b[i].getAttribute("class").toLowerCase() > b[i + 1].getAttribute("class").toLowerCase()) {
+        		shouldSwitch = true;
+        		break;
+      		}
+    	}
+    	if (shouldSwitch) {b[i].parentNode.insertBefore(b[i + 1], b[i]); switching = true;}
   }
 }
 
-
+function sortInstancies(listIssue, curCategory){
+	var list, i, switching, b, shouldSwitch;
+	var list = document.getElementById(listIssue).getElementsByClassName(curCategory)[0];	
+	switching = true;
+	while (switching) {
+  	switching = false;
+  	b = list.children;
+  	for (i = 0; i < (b.length - 1); i++) {
+      		shouldSwitch = false;
+      		if (b[i].getAttribute("class").toLowerCase() > b[i + 1].getAttribute("class").toLowerCase()) {
+        		shouldSwitch = true;
+        		break;}}
+    	if (shouldSwitch) {b[i].parentNode.insertBefore(b[i + 1], b[i]); switching = true;}}
+}
 
 
 
