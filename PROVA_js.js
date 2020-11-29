@@ -596,7 +596,7 @@ function sortOccurrences(){
 	for (var i = 1; i <= 2; i++){   //nella versine finale ci sarà 3 perchè abbiamo 3 listissues
 		//sortCategory("listIssue" + i);
 		sortCategory(document.getElementById("listIssue" + i));
-		for (var n = 0; n <= document.getElementById("listIssue" + i).children.length; n++){
+		for (var n = 0; n < document.getElementById("listIssue" + i).children.length; n++){
 			//sortInstancies("listIssue" + i, document.getElementById("listIssue" + i).children[n].className);
 			sortCategory(document.getElementById("listIssue" + i).getElementsByClassName(document.getElementById("listIssue" + i).children[n].className)[0]);
 		}
