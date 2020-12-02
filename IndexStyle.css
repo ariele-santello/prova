@@ -614,27 +614,51 @@ Bottom right text
 
 
 /* contenitore di #content e #metadata, se si aggiunge margine a uno dei due non stanno più allineati */
-#flex-container {
+.flex-container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
 }
-
-/* @media (min-width: 768px) */
-#content {
-  position: relative;
-  padding-left: 15px; /* per farci stare il bottone prevArticle */
-  flex: 0 0 65%;
-  max-width: 65%;
+.flex-container > * {
+  padding: 10px;
+  flex: 1 100%;
 }
 
-#metadata {
+@media all and (min-width: 600px){
+  .metadata{  position: relative;
+              overflow: scroll;
+              flex: 0 0 30%;
+              max-width: 30%;
+            }
+}
+
+@media all and (min-width: 800px){
+  .content{ position: relative;
+            padding-left: 15px; /* per farci stare il bottone prevArticle */
+            flex: 0 0 65%;
+            max-width: 65%;
+  }
+  .content {order: 1;}
+  .metadata{order: 2;}
+  .footer: {order: 3;}
+
+}
+
+/* @media (min-width: 768px) */
+/*#content {
+  position: relative;
+  padding-left: 15px;  !! per farci stare il bottone prevArticle 
+  flex: 0 0 65%;
+  max-width: 65%;
+} */
+
+/* #metadata {
   position: relative;
   overflow: scroll;
   flex: 0 0 30%;
   max-width: 30%;
-}
+}   */
 
 
 
