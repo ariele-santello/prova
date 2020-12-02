@@ -625,13 +625,13 @@ Bottom right text
   flex: 1 100%;
 }
 
-@media all and (min-width: 600px){
+/*@media all and (min-width: 600px){
   .metadata{  position: relative;
               overflow: scroll;
               flex: 0 0 30%;
               max-width: 30%;
             }
-}
+} */
 
 @media all and (min-width: 800px){
   .content{ position: relative;
