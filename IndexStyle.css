@@ -614,16 +614,16 @@ Bottom right text
 
 
 /* contenitore di #content e #metadata, se si aggiunge margine a uno dei due non stanno più allineati */
-.flex-container {
+#flex-container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
 }
-.flex-container > * {
+/*.flex-container > * {
   padding: 10px;
   flex: 1 100%;
-}
+} */
 
 /*@media all and (min-width: 600px){
   .metadata{  position: relative;
@@ -633,9 +633,9 @@ Bottom right text
             }
 } */
 
-@media all and (min-width: 800px){
+/*@media all and (min-width: 800px){
   .content{ position: relative;
-            padding-left: 15px; /* per farci stare il bottone prevArticle */
+            padding-left: 15px;  per farci stare il bottone prevArticle 
             flex: 0 0 65%;
             max-width: 65%;
   }
@@ -643,22 +643,22 @@ Bottom right text
   .metadata{order: 2;}
   .footer: {order: 3;}
 
-}
-
-/* @media (min-width: 768px) */
-/*#content {
-  position: relative;
-  padding-left: 15px;  !! per farci stare il bottone prevArticle 
-  flex: 0 0 65%;
-  max-width: 65%;
 } */
 
-/* #metadata {
+/* @media (min-width: 768px) */
+#content {
+  position: relative;
+  padding-left: 15px;  /* per farci stare il bottone prevArticle */
+  flex: 0 0 65%;
+  max-width: 65%;
+} 
+
+#metadata {
   position: relative;
   overflow: scroll;
   flex: 0 0 30%;
   max-width: 30%;
-}   */
+}   
 
 
 
