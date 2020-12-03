@@ -626,12 +626,13 @@ Bottom right text
   flex: 1 100%;
 }
 
-@media all and (min-width: 600px){
+/* @media all and (min-width: 600px){
   .footer  {flex: 2 0px;}
   .content {order: 1;}
   .metadata{order: 2;}
   .footer  {order: 3;}
-}
+}  */
+
 /*@media all and (min-width: 600px){
   .metadata{  position: relative;
               overflow: scroll;
@@ -669,7 +670,7 @@ Bottom right text
   max-width: 30%;
 }   
 
-/*#footer{flex: 1 100%;}   */
+#footer{flex: 1 100%;}   /* aggiunto per ultimo */
 
 
 /*extra per la navbar generale
