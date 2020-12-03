@@ -54,9 +54,9 @@
     	}  */
 /* tolto un }*/
 
-
+/* era in commento*/
 function changeIssue(issueN){
-	/* if ('issue1' === issueN) {
+	 if ('issue1' === issueN) {
 		var x = document.getElementById('issue1');
 		var y = document.getElementById('issue2');
 	} 
