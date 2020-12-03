@@ -54,9 +54,9 @@
     	}  */
 /* tolto un }*/
 
-/* era in commento*/
+
 function changeIssue(issueN){
-	 if ('issue1' === issueN) {
+	/* if ('issue1' === issueN) {
 		var x = document.getElementById('issue1');
 		var y = document.getElementById('issue2');
 	} 
@@ -69,7 +69,7 @@ function changeIssue(issueN){
 	for (var i=0; i<y.children.length; i++) {
 		y.children[i].style.display = "none";
 	}
-	
+	*/
 	var y = [];
 	for (var h=1; h<=3; h++){
 		if ('issue'+h === issueN){x = document.getElementById('issue'+h);}
