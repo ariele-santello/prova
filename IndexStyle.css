@@ -502,8 +502,8 @@ img, p, h1, h2, h3, h4, h5, h6, hr, br {
   position: fixed; /*bottom: 0;   or absolute*/ 
   width: 100%;
   height: 40px; /* or 2.5rem; */
-  /* per fissarlo sotto con FLEX --> BODY DISPLAY: FLEX;
-  flex-shrink: 0; */
+  /* per fissarlo sotto con FLEX --> BODY DISPLAY: FLEX; */
+  flex-shrink: 0; 
 }
 .footer a{text-decoration: none;}
 .footer a:link{color:white;}
