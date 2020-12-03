@@ -656,9 +656,10 @@ Bottom right text
 /* queste non so cosa fanno */
 
 /* @media (min-width: 768px) */ 
-#content {
+
+/*#content {
   position: relative;
-  padding-left: 15px;  /* per farci stare il bottone prevArticle */
+  padding-left: 15px;   per farci stare il bottone prevArticle 
   flex: 0 0 65%;
   max-width: 65%;
 } 
@@ -670,7 +671,10 @@ Bottom right text
   max-width: 30%;
 }   
 
-#footer{flex: 1 100%;}   /* aggiunto per ultimo */
+#footer{
+  position: fixed;
+  flex: 1 100%;
+  }    aggiunto per ultimo */
 
 
 /*extra per la navbar generale
