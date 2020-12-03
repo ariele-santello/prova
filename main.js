@@ -1,18 +1,13 @@
- function myFunction() {
-	var x = document.getElementById("myTopnav");
-	if (x.className === "topnav") {x.className += " responsive";} 
-	else {x.className = "topnav";}
-    }
-
+function changeCSS(cssFile, cssLinkIndex) {
 	/* create new link */
 
-/* 	var newlink = document.createElement("link");
+	var newlink = document.createElement("link");
 	newlink.rel = "stylesheet"; 
   	newlink.type = "text/css";
-	newlink.href = cssFile;  */
+	newlink.href = cssFile;
 	
 	/* case 1: external html */
-/*	var linksArray = document.head.getElementsByTagName("link");
+	var linksArray = document.head.getElementsByTagName("link");
 	var firstCount = 0;
     	for (var l = 0; l < linksArray.length; l++) {
     		if (linksArray[l].rel == "stylesheet") {
@@ -20,10 +15,10 @@
     			linksArray[l].href = cssFile;
     		}
     	}
-    	if (firstCount == 0) {document.head.appendChild(newlink);}  */
+    	if (firstCount == 0) {document.head.appendChild(newlink);}
 	
 	/* case 2: internal html */
-/*	var myFrames = document.getElementsByTagName("iframe");
+	var myFrames = document.getElementsByTagName("iframe");
     	for (var i = 0; i < myFrames.length; i++) {
     		var n = i+1;
     		var myFrame = document.getElementById("iframe"+ n);
@@ -37,7 +32,7 @@
     			}
     		}
     		if (count == 0) {elmnt.appendChild(newlink);}
-    	}   */
+    	}
     
     /* aggiunta per cambiare il css anche nei singoli iframe    */
     
@@ -52,49 +47,40 @@
 		var d = c.document.getElementsByTagName("head");
 		d[0].replaceChild(newlink, iframeOldlink);
     	}  */
-/* tolto un }*/
+}
 
 
 function changeIssue(issueN){
-	/* if ('issue1' === issueN) {
+	  /*  identificare l'issue da mostrare   */
+	if ('issue1' === issueN) {
 		var x = document.getElementById('issue1');
 		var y = document.getElementById('issue2');
 	} 
 	else {
 		var x = document.getElementById('issue2');
 		var y = document.getElementById('issue1');
-	} 
-	// issue y da non mostrare
-	y.style.display = "none";
+	}
+
+	  /*  azioni sull'issue da mostrare e quelli da non mostrare   */
+	var xChildren = x.children;     /*  i div che hanno class coverPage e articleN   */
+	var totLength = xChildren.length;     /* lunghezza della struttura dati dei figli di x  */
+	
+	x.style.display = "block";   /* issue da mostrare  */
+	xChildren[0].style.display = "block";   /* cover da mostrare  */
+	
+	y.style.display = "none";  /* issue da non mostrare  */
 	for (var i=0; i<y.children.length; i++) {
 		y.children[i].style.display = "none";
 	}
-	*/
-	var y = [];
-	for (var h=1; h<=3; h++){
-		if ('issue'+h === issueN){x = document.getElementById('issue'+h);}
-		else{y.push(h);}
-	}
-	//issue da nascondere
-	for (var num of y){
-		var curIssue = document.getElementById('issue'+num);
-		curIssue.style.display = "none"; 
-		for (var i=0; i<curIssue.children.length; i++) {curIssue.children[i].style.display = "none";}
-	}
-	//issue da mostrare
-	var xChildren = x.children;     /*  i div che hanno class coverPage e articleN   */
-	var totLength = xChildren.length;  
-	x.style.display = "block";   /* issue da mostrare  */
-	xChildren[0].style.display = "block";   /* cover da mostrare  */
 	
 	var oldArticles = document.getElementById("changeArguments").children;  /* per cambiare il contenuto delle funzioni onclick degli articoli  */
 	
 	for (var i=1; i<totLength; i++) {
-		xChildren[i].style.display = "none";    // articoli da non mostrare  
+		xChildren[i].style.display = "none";    /* articoli da non mostrare  */
 		
-		var newArticle = document.createElement("a");    // creazione del nuovo tag 
-		newArticle.setAttribute("class", "buttonArticle");   // creazione del nuovo tag, set classe
-		newArticle.setAttribute("onclick", "changeArticle('article"  + i + "', '" + issueN + "')");   // creazione del nuovo tag, set onclick attibute
+		var newArticle = document.createElement("a");    /* creazione del nuovo tag  */
+		newArticle.setAttribute("class", "buttonArticle");   /* creazione del nuovo tag, set classe  */
+		newArticle.setAttribute("onclick", "changeArticle('article"  + i + "', '" + issueN + "')");   /* creazione del nuovo tag, set onclick attibute  */
 
 		var myFrame = xChildren[i].children[0];
 		var myMeta = myFrame.contentWindow.document.head.getElementsByTagName("meta");
@@ -173,10 +159,10 @@ function changeArticleCover(articleNum, issueNum){
 function prevArticle() {
  	var articles = document.getElementsByClassName("article");
  	
- 	for (var i = 1; i < articles.length; i++) { //i= 1 perché non voglio considerare il primo articolo
+ 	for (var i = 1; i < articles.length; i++) { /* i= 1 perché non voglio considerare il primo articolo */
  		var frame = articles[i],
  			style = window.getComputedStyle(frame),
-			displayValue = style.getPropertyValue('display'); //queste ultime due righe sono equivalenti a var displayValue = window.getComputedStyle(frame, null).display;
+			displayValue = style.getPropertyValue('display'); /* queste ultime due righe sono equivalenti a var displayValue = window.getComputedStyle(frame, null).display; */
 		if (displayValue === "block") {
 			if (!(frame.classList.contains('article1'))) {
 				frame.style.display = "none";
@@ -186,7 +172,7 @@ function prevArticle() {
 				var curIssue = articleNow.parentElement;
 				var x = curIssue.children[i-1]; */
 				var myOrigin = document.getElementById("Origin");
-				getLinkOrigin(articleNow, myOrigin); // se scegliamo di definire la variabile myframe in questa funzione va sostituito articleNow con myFrame come parametro input della funzione getLinkOrigin
+				getLinkOrigin(articleNow, myOrigin); /* se scegliamo di definire la variabile myframe in questa funzione va sostituito articleNow con myFrame come parametro input della funzione getLinkOrigin */
 			}
 		}
 	}	
@@ -195,12 +181,12 @@ function prevArticle() {
 function nextArticle() {
 	var articles = document.getElementsByClassName("article");
 
-	for (var i = articles.length-2; i >= 0; i--) { //articles length = 6, ma noi non vogliamo considerare l'ultimo quindi mettiamo articles.lenght - 2 (con -1 considera anche l'ultimo perché length - 1 = 5 e articles[5] è l'ultimo articolo)
+	for (var i = articles.length-2; i >= 0; i--) { /* articles length = 6, ma noi non vogliamo considerare l'ultimo quindi mettiamo articles.lenght - 2 (con -1 considera anche l'ultimo perché lenght - 1 = 5 e articles[5] è l'ultimo articolo) */
 		var frame = articles[i],
     		style = window.getComputedStyle(frame),
 			displayValue = style.getPropertyValue('display');
 		if (displayValue === 'block') {
-			if (!(frame.classList.contains('article5'))) { //IMPORTANTE: qua ho messo che la classe dell'ultimo articolo è "article5"
+			if (!(frame.classList.contains('article3'))) { /* IMPORTANTE: qua ho messo che la classe dell'ultimo articolo è "article3" ma nel sito finale sarà ARTICLE5*/
 				frame.style.display='none';
 				articles[i+1].style.display = 'block';
 				var myOrigin = document.getElementById("Origin");
@@ -232,20 +218,24 @@ function metadataViewer () {  // ricordarsi di lowercase e altre cose di scrittu
     	for (var n = 1; n < myFrames.length; n++) { 
 		
 		var sc = document.createElement("script");
-		sc.setAttribute('src', '../../main.js');
+		sc.setAttribute('src', 'PROVA_js.js');
 		myFrames[n].contentWindow.document.head.appendChild(sc);
 		
 	    	var elmnt = myFrames[n].contentWindow.document.body;
 
-	    	//add an id for each element of the body of the iframe with the name of the tag + number of the tag + number of the current article (e.g. "h1-1-n")
+	    	/*aggiungere un id ad ogni elemento del body tipo = "h1-1-n" */
 	    	var allIframeElements = elmnt.getElementsByTagName("*");
 	    	//for (let element of allIframeElements) {
 	    	for (var e = 0; e < allIframeElements.length; e++) {
-	    		var x = allIframeElements[e].tagName; //ritorna una stringa che rappresenta il nome del tag in maiuscolo	    		
-	    		var elementsWithSameTag = elmnt.querySelectorAll('[id^=' + CSS.escape(x) + ']'); //^ matches the start; the querySelectorAll method returns a static NodeList with elements matching the specified group of selectors; css.escape per assicurarsi che il valore sia codificato correttamente per l'uso in un'espressione CSS
+	    		var x = allIframeElements[e].tagName; //ritorna una stringa che rappresenta il nome del tag in maiuscolo, in realtà x è inutile ai fini di creare un id unico, però può servirci quando dobbiamo dare un punto di riferimento nel documento all'utente
+	    		
+	    		var elementsWithSameTag = elmnt.querySelectorAll('[id^=' + CSS.escape(x) + ']'); //^ matches the start; the querySelectorAll method returns a static NodeList representing a list of elements that match the specified group of selectors; css.escape per assicurarsi che il valore sia codificato correttamente per l'uso in un'espressione CSS.
 	    		var len = elementsWithSameTag.length;
-	    		allIframeElements[e].setAttribute("id", x+"-"+(len+1)+"-"+n);
-	    	}		    	 
+
+	    		allIframeElements[e].setAttribute("id", x+"-"+(len+1)+"-"+n);		    				    		
+				//allIframeElements[e].setAttribute("id", x+"-"+e+"-"+n); // alternativa: element.id = "";
+	    	}
+	    	// esempio: art.2 dell'issue 2, i primi 5 elementi del body sono: <section id="SECTION-1-2">, <h1 id="H1-1-2">, <img id="IMG-1-2">, <p id="P-1-2">, <p id="p-2-2">...		    	 
 			
 			// get span tag 
 			var spans = Array.prototype.slice.call(elmnt.getElementsByTagName("span"));
@@ -294,11 +284,9 @@ function metadataViewer () {  // ricordarsi di lowercase e altre cose di scrittu
 				
 			}
 
-
 			// get time tag 
 			var times = Array.prototype.slice.call(elmnt.getElementsByTagName("time"));
 
-			//first check: if the category already exist
 			for (var t=0; t<times.length; t++){
 				// creating variable for parent
 				if (times[t].parentNode.tagName === ("Q" || "I" || "SPAN" || "A" || "EM" || "STRONG" || "B" || "CITE")) {
@@ -348,7 +336,7 @@ function createCategoryLi(category, myList) {
 	myList.appendChild(newLi);
 }
 
-function createInstanceUl(instance, parentLi, myList) {
+function createInstanceUl(instance, parentLi, myList) { //ragionare sul primo link a wikipedia (se farlo vedere contemporaneamente all'ul)
 	var newUl = document.createElement('ul');
 	newUl.setAttribute('class', instance);
 	newUl.setAttribute('onClick', "showUlChildren('"+myList.id+"', '"+instance+"', event)");
