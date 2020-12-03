@@ -621,11 +621,17 @@ Bottom right text
   flex-direction: row;
   justify-content: space-between;
 }
-/*.flex-container > * {
-  padding: 10px;
+.flex-container > * {  /*all items are 100 widht */
+  /* padding: 10px; */
   flex: 1 100%;
-} */
+}
 
+@media all and (min-width: 600px){
+  .footer  {flex: 2 0px;}
+  .content {order: 1;}
+  .metadata{order: 2;}
+  .footer  {order: 3;}
+}
 /*@media all and (min-width: 600px){
   .metadata{  position: relative;
               overflow: scroll;
@@ -646,7 +652,9 @@ Bottom right text
 
 } */
 
-/* @media (min-width: 768px) */
+/* queste non so cosa fanno */
+
+/* @media (min-width: 768px) */ 
 #content {
   position: relative;
   padding-left: 15px;  /* per farci stare il bottone prevArticle */
@@ -661,6 +669,7 @@ Bottom right text
   max-width: 30%;
 }   
 
+/*#footer{flex: 1 100%;}   */
 
 
 /*extra per la navbar generale
