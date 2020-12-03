@@ -4,16 +4,15 @@
 	else {x.className = "topnav";}
     }
 
-function changeCSS(cssFile, cssLinkIndex) {
 	/* create new link */
 
-	var newlink = document.createElement("link");
+/* 	var newlink = document.createElement("link");
 	newlink.rel = "stylesheet"; 
   	newlink.type = "text/css";
-	newlink.href = cssFile;
+	newlink.href = cssFile;  */
 	
 	/* case 1: external html */
-	var linksArray = document.head.getElementsByTagName("link");
+/*	var linksArray = document.head.getElementsByTagName("link");
 	var firstCount = 0;
     	for (var l = 0; l < linksArray.length; l++) {
     		if (linksArray[l].rel == "stylesheet") {
@@ -21,10 +20,10 @@ function changeCSS(cssFile, cssLinkIndex) {
     			linksArray[l].href = cssFile;
     		}
     	}
-    	if (firstCount == 0) {document.head.appendChild(newlink);}
+    	if (firstCount == 0) {document.head.appendChild(newlink);}  */
 	
 	/* case 2: internal html */
-	var myFrames = document.getElementsByTagName("iframe");
+/*	var myFrames = document.getElementsByTagName("iframe");
     	for (var i = 0; i < myFrames.length; i++) {
     		var n = i+1;
     		var myFrame = document.getElementById("iframe"+ n);
@@ -38,7 +37,7 @@ function changeCSS(cssFile, cssLinkIndex) {
     			}
     		}
     		if (count == 0) {elmnt.appendChild(newlink);}
-    	}
+    	}   */
     
     /* aggiunta per cambiare il css anche nei singoli iframe    */
     
@@ -53,7 +52,7 @@ function changeCSS(cssFile, cssLinkIndex) {
 		var d = c.document.getElementsByTagName("head");
 		d[0].replaceChild(newlink, iframeOldlink);
     	}  */
-}
+/* tolto un }*/
 
 
 function changeIssue(issueN){
