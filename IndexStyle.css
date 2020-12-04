@@ -615,20 +615,19 @@ Bottom right text
 
 
 /* contenitore di #content e #metadata, se si aggiunge margine a uno dei due non stanno più allineati */
-#flex-container {
+#flex-container { 
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.flex-container > * {   
-  padding: 10px; 
+.flex-container > * {    /* oppure 100% solo a topflex*/
   flex: 1 100%;
 }  
 
 @media all and (min-width: 600px){
- .footer      {flex: 2 0px;}
+ .contentflex {flex: 2 0px;}
  .contentflex {order: 1;}
  .metadataflex{order: 2;}
  .footer      {order: 3;}
