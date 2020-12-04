@@ -621,16 +621,17 @@ Bottom right text
   flex-direction: row;
   justify-content: space-between;
 }
-.flex-container > * {  /*all items are 100 widht */
+
+/*.flex-container > * {    all items are 100 widht 
   padding: 10px; 
   flex: 1 100%;
-}
+} */
 
- @media all and (min-width: 600px){
-  .footer  {flex: 2 0px;}
-  .contentflex {order: 1;}
-  .metadataflex{order: 2;}
-  .footer  {order: 3;}
+@media all and (min-width: 600px){
+ .footer  {flex: 2 0px;}
+ .contentflex {order: 1;}
+ .metadataflex{order: 2;}
+ .footer  {order: 3;}
 }  
 
 /*@media all and (min-width: 600px){
@@ -655,27 +656,24 @@ Bottom right text
 
 /* queste non so cosa fanno */
 
-/* @media (min-width: 768px) */ 
-
-/*#content {
+@media all and (min-width: 768px){ /* o media senza all e and */
+  .contentflex {
   position: relative;
-  padding-left: 15px;   per farci stare il bottone prevArticle 
+  padding-left: 15px;  /* per farci stare il bottone prevArticle */
   flex: 0 0 65%;
   max-width: 65%;
-} 
-
-#metadata {
+  }
+  .metadataflex {
   position: relative;
   overflow: scroll;
   flex: 0 0 30%;
   max-width: 30%;
-}   
-
-#footer{
+  }   
+  .footer{
   position: fixed;
   flex: 1 100%;
-  }    aggiunto per ultimo */
-
+  }    
+}
 
 /*extra per la navbar generale
 
