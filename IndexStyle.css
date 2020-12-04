@@ -621,11 +621,11 @@ Bottom right text
   flex-direction: row;
   justify-content: space-between;
 }
-
-.flex-container > * {   /* all items are 100 widht */
+/*
+.flex-container > * {    all items are 100 widht 
   padding: 10px; 
   flex: 1 100%;
-} 
+}  */
 
 @media all and (min-width: 600px){
  .footer      {flex: 2 0px;}
