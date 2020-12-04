@@ -656,24 +656,24 @@ Bottom right text
 
 /* queste non so cosa fanno */
 
-@media all and (min-width: 768px){ /* o media senza all e and */
-  .contentflex {
+/* @media all and (min-width: 768px){} */
+  #contentflex {
   position: relative;
   padding-left: 15px;  /* per farci stare il bottone prevArticle */
   flex: 0 0 65%;
   max-width: 65%;
   }
-  .metadataflex {
+  #metadataflex {
   position: relative;
   overflow: scroll;
   flex: 0 0 30%;
   max-width: 30%;
   }   
-  .footer{
+  #footer{
   position: fixed;
   flex: 1 100%;
   }    
-}
+
 
 /*extra per la navbar generale
 
