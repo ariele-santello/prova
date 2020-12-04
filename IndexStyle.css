@@ -621,7 +621,7 @@ Bottom right text
   justify-content: space-between;
 }
 
-/*.flex-container > * {     oppure 100% solo a topflex
+.flex-container > * {     oppure 100% solo a topflex
   flex: 1 100%;
 }  */
 /*
