@@ -628,10 +628,10 @@ Bottom right text
 } */
 
 @media all and (min-width: 600px){
- .footer  {flex: 2 0px;}
+ .footer      {flex: 2 0px;}
  .contentflex {order: 1;}
  .metadataflex{order: 2;}
- .footer  {order: 3;}
+ .footer      {order: 3;}
 }  
 
 /*@media all and (min-width: 600px){
