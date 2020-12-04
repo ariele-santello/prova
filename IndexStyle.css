@@ -8,7 +8,6 @@ html {
 }
 
 body {
- 
   font-family: 'Proza Libre', sans-serif;
   margin: 0;
   margin-top: 0px;
@@ -502,7 +501,7 @@ img, p, h1, h2, h3, h4, h5, h6, hr, br {
   width: 100%;
   height: 40px; /* or 2.5rem; */
 
-  /* per fissarlo sotto con FLEX --> BODY DISPLAY: FLEX; */
+  /* per fissarlo sotto conFLEX --> flex-shrink: 0;  BODY DISPLAY: FLEX; */
    
 }
 .footer a{text-decoration: none;}
@@ -678,7 +677,6 @@ Bottom right text
   #footer{
   position: fixed;
   flex: 1 100%;
-  flex-shrink: 0;
   }    
 
 
