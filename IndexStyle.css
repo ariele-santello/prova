@@ -488,7 +488,7 @@ img, p, h1, h2, h3, h4, h5, h6, hr, br {
 
 
 .footer {
-  bottom:0px;  /* aggiunto poco fa*/
+ /* bottom:0px;  /* aggiunto poco fa*/
   text-align: justify;
   text-align: center;
   font-size: small;
@@ -501,7 +501,7 @@ img, p, h1, h2, h3, h4, h5, h6, hr, br {
   margin-right: 0em;  /* modifiche per tenere sotto il footer */
   position: fixed; /*bottom: 0;   or absolute*/ 
   width: 100%;
-  height: 40px; /* or 2.5rem; */
+ /*  height: 40px; or 2.5rem; */
   /* per fissarlo sotto con FLEX --> BODY DISPLAY: FLEX; */
   flex-shrink: 0; 
 }
@@ -668,16 +668,19 @@ Bottom right text
   padding-left: 15px;  /* per farci stare il bottone prevArticle */
   flex: 1 auto;        /*0 0 65%; */)
   max-width: 65%;
+  padding-bottom: 2.5rem;
   }
   #metadataflex {
  /* position: relative; */
   overflow: scroll;
   flex: 0 0 30%;
   max-width: 30%;
+  padding-bottom: 2.5rem;
   }   
   #footer{
   position: fixed;
   flex: 1 100%;
+  height: 2.5rem;
   }    
 
 
