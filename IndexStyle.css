@@ -615,23 +615,21 @@ Bottom right text
 
 
 /* contenitore di #content e #metadata, se si aggiunge margine a uno dei due non stanno più allineati */
-
-/*.flex-container { 
+#flex-container { 
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-}*/
+}
 
 /*.flex-container > * {     oppure 100% solo a topflex
   flex: 1 100%;
-}  
+}  */
 
-.topflex{
+#topflex{
   position: fixed;
   flex: 1 100%;
 }
-*/
 
 /*
 @media all and (min-width: 800px){
@@ -665,23 +663,23 @@ Bottom right text
 /* queste non so cosa fanno */
 
 /* @media all and (min-width: 768px){} */
-/*  .contentflex {
- /* position: relative; 
-  padding-left: 15px;  per farci stare il bottone prevArticle 
-  flex: 1 auto;        0 0 65%; 
+  #contentflex {
+  position: relative;
+  padding-left: 15px;  /* per farci stare il bottone prevArticle */
+  flex: 1 auto; /*0 0 65%; */)
   max-width: 65%;
   }
-  .metadataflex {
+  #metadataflex {
   position: relative;
   overflow: scroll;
   flex: 0 0 30%;
   max-width: 30%;
   }   
-  .footer{
+  #footer{
   position: fixed;
   flex: 1 100%;
   }    
-*/
+
 
 /*extra per la navbar generale
 
