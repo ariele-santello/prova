@@ -664,13 +664,13 @@ Bottom right text
 
 /* @media all and (min-width: 768px){} */
   #contentflex {
-  position: relative;
+ /* position: relative; */
   padding-left: 15px;  /* per farci stare il bottone prevArticle */
   flex: 1 auto;        /*0 0 65%; */)
   max-width: 65%;
   }
   #metadataflex {
-  position: relative;
+ /* position: relative; */
   overflow: scroll;
   flex: 0 0 30%;
   max-width: 30%;
