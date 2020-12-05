@@ -666,7 +666,7 @@ Bottom right text
   #contentflex {
   position: relative;
   padding-left: 15px;  /* per farci stare il bottone prevArticle */
-  flex: 0 0 65%;
+  flex: 1 auto;        /*0 0 65%; */)
   max-width: 65%;
   }
   #metadataflex {
