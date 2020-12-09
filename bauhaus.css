@@ -39,6 +39,10 @@ h2{font-family: "Bauhaus 93";}
 h3{font-family: "Bauhaus 93";}
 p{font-family: "Bayer Sans";}
 figcaption{font-family: "Bauhaus 93";}
+img{
+  width: 50%
+  filter:saturate(0%) sepia(100%) contrast(150%) saturate(150%);
+}
 
 /*p:first-of-type:first-letter:not(.subtitle){
   text-indent: 2em;
