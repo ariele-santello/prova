@@ -29,8 +29,8 @@ p{text-align: justify;}
 
 /* stile per articoli*/
 
-body{
-  background-image: url('bauhaus_sfondo.jpg')50%;
+section{
+  background-image: url('bauhaus_sfondo.jpg');
   /*font-family: "Bayer Sans"; */
 }
 
