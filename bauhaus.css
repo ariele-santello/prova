@@ -4,22 +4,26 @@
   
 }
 @font-face {
-  font-family: 'Bauhaus 93';
-  src: url("bauhaus93.ttf"); 
+  font-family: Bauhaus 93;
+  src: url("bauhs93.ttf"); 
 }
 h1, .byline{
-  font-family: 'Bauhaus 93';
+  font-family: "Bauhaus 93";
 }
 
 /* stile per cover page*/
-
+/*
 body#cover{
   background-image: url('bauhaus_sfondo.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: 'Bauhaus 93';
+  height: 100%;
+  font-family: "Bauhaus 93";
+  font-weight:normal;
+  font-style:normal;
 }
 p{text-align: justify;}
+*/
 
 body{
   background-image: 
@@ -28,7 +32,7 @@ body{
       rgba(255, 255, 240, 0.5)
     ),
     url('bauhaus_sfondo.jpg');
-    font-family: Bayer Sans;
+    font-family: "Bayer Sans";
     font-weight:normal;
   font-style:normal;
   margin-right: 20vW;
@@ -36,7 +40,8 @@ body{
   margin-top: 20vW;
   margin-bottom: 30vW;
 }
-p:first-child:first-letter{
+p:first-of-type:first-letter:not(.subtitle){
   text-indent: 2em;
   font-family: 'Bauhaus 93'
 }
+p.pubnote{text-transform: rotate(-90deg);}
