@@ -29,7 +29,7 @@ p{text-align: justify;}
 
 /* stile per articoli*/
 
-section{
+body{
   background-image: url('bauhaus_sfondo.jpg');
   /*font-family: "Bayer Sans"; */
 }
@@ -38,6 +38,7 @@ h1{font-family: "Bauhaus 93";}
 h2{font-family: "Bauhaus 93";}
 h3{font-family: "Bauhaus 93";}
 p{font-family: "Bayer Sans";}
+figcaption{font-family: "Bauhaus 93";}
 
 /*p:first-of-type:first-letter:not(.subtitle){
   text-indent: 2em;
