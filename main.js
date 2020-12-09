@@ -36,7 +36,7 @@ function changeCSS(cssFile, cssLinkIndex) {
     
     /* aggiunta per cambiare il css anche nei singoli iframe    */
     
-    frames[i].document.head.repleaceChild(newLink);
+    /* frames[i].document.head.repleaceChild(newLink);
     n = i+1
     frames['frame'+n].document.head.children[1].replace(newlink, oldlink);   */
 	
@@ -46,7 +46,7 @@ function changeCSS(cssFile, cssLinkIndex) {
 		var iframeOldlink = c.document.getElementsByTagName("link").item(cssLinkIndex);
 		var d = c.document.getElementsByTagName("head");
 		d[0].replaceChild(newlink, iframeOldlink);
-    	}  
+    	}  */
 }
 
 
