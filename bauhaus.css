@@ -30,11 +30,13 @@ p{text-align: justify;}
 /* stile per articoli*/
 
 body{
-  background-image: url('bauhaus_sfondo.jpg');
+  background-image: url('bauhaus_sfondo.jpg')50%;
   /*font-family: "Bayer Sans"; */
 }
 
 h1{font-family: "Bauhaus 93";}
+h2{font-family: "Bauhaus 93";}
+h3{font-family: "Bauhaus 93";}
 p{font-family: "Bayer Sans";}
 
 /*p:first-of-type:first-letter:not(.subtitle){
