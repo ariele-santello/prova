@@ -23,7 +23,7 @@ body#cover{
   font-style:normal;
 }
 p{text-align: justify;}
-*/
+
 
 body{
   background-image: 
@@ -40,6 +40,7 @@ body{
   margin-top: 20vW;
   margin-bottom: 30vW;
 }
+*/
 p:first-of-type:first-letter:not(.subtitle){
   text-indent: 2em;
   font-family: 'Bauhaus 93'
