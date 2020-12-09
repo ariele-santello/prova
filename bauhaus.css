@@ -31,12 +31,17 @@ p{text-align: justify;}
 
 body{
   background-image: url('bauhaus_sfondo.jpg');
-  font-family: "Bayer Sans";
+  /*font-family: "Bayer Sans"; */
 }
 
-p:first-of-type:first-letter:not(.subtitle){
+h1{font-family: "Bauhaus 93";}
+p{font-family: "Bayer Sans";}
+
+/*p:first-of-type:first-letter:not(.subtitle){
   text-indent: 2em;
   font-family: "Bayer Sans";
 }
+
 p.pubnote{text-transform: rotate(-90deg);}
-h1{font-family: "Bauhaus 93"}
+h1{font-family: "Bauhaus 93";}
+*/
